@@ -1,0 +1,295 @@
+/* global css start */
+.app_login_wrapper {
+    background-color: red;
+}
+.ap-auth-wrapper{
+    background-color: #edf5ff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding: 15px;
+}
+.ap-container{
+    width: 100%;
+    padding: 20px 0;
+}
+.ap-row{
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .ap-login-container {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 20px;
+} */
+.ap-login-logo {
+    /* border-radius: 20px 20px 0 0; */
+    padding: 0 0 20px;
+    margin: 0 auto;
+}
+.ap-login-logo img {
+    max-width: 180px;
+    width: auto;
+    min-height: 40px;
+    object-fit: cover;
+}
+/* .ap-login-row{
+    max-width: 600px;
+    margin:auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--appPortal-white-color);
+    border-radius: 20px;
+} */
+.ap-form-box{
+    background-color: var(--appPortal-white-color);
+    width: 100%;
+    padding: 30px;
+    border-radius: 28px;
+    box-shadow: -2px 43px 60px 0 rgb(0 108 155 / 19%);
+}
+.ap-form-box .ap-title-head{
+    margin: 0 0 20px;
+}
+/* .ap-formbox-wrapper{
+    padding: 30px;
+} */
+.ap_form-head {
+    text-align: left;
+    margin: 0 0 20px;
+}
+.ap-title-head h3 {
+    text-align: center;
+    padding: 0px 0 10px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.ap_form-head p{
+    font: 15px;
+    font-weight: 400;
+    color: #000;   
+}
+.ap-input-field {
+    margin-bottom: 20px;
+    max-width: 530px;
+    position: relative;
+    text-align: left;
+}
+.ap-input-has-icon {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3px;
+}
+.ap-input-field label > span{
+    color: red;
+}
+.ap-input-field label {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin: 0 0 10px;
+    text-align: left;
+}
+.ap-input-field input {
+    width: 100%;
+    padding: 14px 45px 14px 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #79798f;
+    border: 1px solid #bfbcbc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.ap-input-field input:focus {
+    border-color: var(--appPortal-primary-color);
+}
+.ap-input-field input::placeholder {
+    color: #c2c1c1;
+}
+.ap-login-logo a h1 {
+    color: #3e1596;
+    font-size: 30px;
+    font-weight: 800;
+}
+.ap-login-logo a h1 span{
+    font-weight: 500;
+}
+.ap-input-field .ap-svg-icon {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+}
+.ap-input-field .ap-svg-icon svg{
+    width: 23px;
+    height: 23px;
+
+}
+.ap-input-field .ap-svg-icon svg path{
+    fill: #c2c1c1;
+}
+span.error{
+    color: red;
+    padding: 10px 0 0;
+}
+.ap-auth-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.ap-auth-rem {
+    display: flex;
+    align-items: center;
+
+}
+.ap-auth-rem input{
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.ap-back-login{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+.ap-auth-actions a{
+    color: var(--appPortal-primary-color);
+}
+.ap-back-login{
+    color: var(--appPortal-primary-color);
+}
+.ap-auth-btn {
+    padding: 15px 15px;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--appPortal-primary-color);
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 11px;
+    min-height: 50px;
+    width: 100%;
+    font-size: 20px;
+}
+.ap-auth-btn:hover, .ap-auth-btn:focus {
+    color: var(--appPortal-white-color);
+}
+.ap-auth-btn:hover {
+    background: #00182d;
+}
+
+button.ap-auth-btn.ap-reset-btn{
+    margin-bottom: 15px;
+}
+.ap-auth-rem{
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.ap-auth-rem input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+}
+.checkmark{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #bfbcbc;
+}
+.ap-auth-rem:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.ap-auth-rem input:checked ~ .checkmark{
+    background-color: var(--appPortal-primary-color);
+}
+.checkmark::after{
+    position: absolute;
+    content: '';
+    display: none;
+}
+.ap-auth-rem input:checked ~ .checkmark::after{
+    display: block;
+}
+.ap-auth-rem .checkmark::after{
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+} 
+p.ap-signup{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    margin: 15px 0 0;
+}
+p.ap-signup a{
+    color: var(--appPortal-primary-color);
+}
+.ap-auth-btn.ap-auth-signup{
+    margin-top: 8px;
+}
+/* Responsive css Start */
+@media (max-width: 675px){
+    /* .ap-login-row{
+        margin: auto 10px;
+    } */
+}
+@media (max-width: 480px){
+    .ap_form-head h3{
+        font-size: 20px;
+    }
+    .ap-formbox-wrapper{
+        padding: 30px 15px;
+    }
+    /* .ap-auth-rem{
+        padding-left: 10px;
+    } */
+    .ap-auth-remember{
+        flex-wrap: wrap;
+    }
+    .ap-auth-remember a{
+        margin: 10px 0 0;
+    }
+
+}
+/* Responsive css End */

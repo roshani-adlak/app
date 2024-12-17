@@ -1,0 +1,525 @@
+/* Dashboard css start*/
+/* button css */
+.ap-btn, button.ap-btn, input.ap-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    min-height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--appPortal-white-color);
+    text-transform: capitalize;
+    padding: 0 30px;
+    border-radius: 6px;
+    background: var(--appPortal-primary-color);
+    border: none;
+    box-shadow: none;
+    outline: none;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border: 1px solid var(--appPortal-primary-color);
+}
+
+button.ap-btn:focus,
+input.ap-btn:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.ap-btn:hover {
+    background-position: 100% 0%;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color: var(--appPortal-white-color);
+    color: var(--appPortal-primary-color);
+}
+/* dashboard css start */
+body{
+    background-color: #edf5ff;
+}
+.ap-sidebar-wrapper {
+    background-color: var(--appPortal-white-color);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left:0px;
+    right: 0;
+    box-shadow: 0 0 15px rgb(0 0 0/5%);
+    width: 280px;
+    transition: all .5s ease-in-out;
+}
+.ap-logo-wrapper{
+    padding: 20px;
+    border-bottom:1px solid #eee;    
+}
+.ap-logo-wrapper span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.ap-logo-wrapper span h2{
+    color: var(--appPortal-primary-color);
+    font-size: 30px;
+    font-weight: 500;
+}
+.ap-logo-wrapper span img{
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: var(--appPortal-white-color);
+    background-color: var(--appPortal-logo-color);
+    font-size: 25px;
+    font-weight: 500;
+}
+.ap-sidemenu-wrap{
+    padding: 20px 20px;
+    transition: all .5s ease-in-out;
+}
+.ap-sidemenu-wrap ul li {
+    position: relative;
+    width: auto;
+}
+.ap-sidemenu-wrap ul li {
+    width: 100%;
+    display: inline-block;
+}
+.ap-sidemenu-wrap ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    position: relative;
+    color: var(--appPortal-heading-color);
+    margin: 0 0 10px;
+}
+.ap-sidemenu-wrap ul li a::before{
+    position: absolute;
+    content: '';
+    height: 30px;
+    margin: auto;
+    background-color: var(--appPortal-primary-color);
+    width: 3px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.ap-sidemenu-wrap ul li a.active, .ap-sidemenu-wrap ul li a:hover{
+    background: linear-gradient(90deg, rgba(78, 79, 235, 0) 0%, rgb(78 79 235 / 12%) 100%);
+    border-radius: 5px;
+}
+.ap-sidemenu-wrap ul li a.active, .ap-sidemenu-wrap ul li > a:hover{
+    color: var(--appPortal-primary-color);
+}
+.ap-sidemenu-wrap ul li a.active::before{
+    visibility: visible;
+    opacity: 1;
+}
+.ap-sidemenu-wrap ul li a.active svg path, .ap-sidemenu-wrap ul li:hover a svg path{
+    fill: var(--appPortal-primary-color);
+} 
+.ap-topnav-wrapper{
+    background-color: var(--appPortal-white-color);
+    padding: 20px 20px;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    left: 280px;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s ease-in-out;
+}
+span.ap-minilogo{
+    display: none;
+}
+/* toggle css */
+.ap-toggle-btn{
+    display: block;
+    cursor: pointer;
+}
+.ap-toggle-btn span {
+    height: 3px;
+    width: 20px;
+    background-color: var(--appPortal-heading-color);
+    display: block;
+    margin: 0 0 5px;
+}
+.toggle-class .ap-sidebar-wrapper{
+    width: 80px;
+}
+.toggle-class span.ap-logo{
+    display: none;
+}
+.toggle-class .ap-minilogo{
+    display: block;
+}
+.toggle-class .ap-sidemenu-wrap ul li a{
+    white-space: nowrap;
+}
+.toggle-class .ap-sidemenu-wrap ul li a span{
+    width: 35px;
+}
+.toggle-class .ap-sidemenu-wrap ul li a span.ap-navtext{
+    transform: translateX(150px);
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+}
+.toggle-class .ap-main-wrapper{
+    left: 100px;
+}
+.toggle-class .ap-sidemenu-wrap{
+    padding: 20px 0;
+}
+
+
+.ap-dash-main{
+    position: relative;
+    padding: 112px  25px 100px;
+    width: calc(100% - 280px);
+    margin-left: 280px;
+    transition:all 0.5s;
+}
+.ap-topright-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.ap-topsite a span svg path{
+    fill: var(--appPortal-primary-color);
+}
+.ap-topsite a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.ap-topsite a h2{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--appPortal-primary-color);
+}
+.ap-admin-box{
+    max-width: 200px;
+    background-color: var(--appPortal-white-color);
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    transform: translateY(50px);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(89, 102, 122, 0.1);
+    border: 1px solid var(--appPortal-border-color);
+}
+.ap-admin-box ul{
+    padding: 10px;
+}
+.ap-admin-box ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--appPortal-bglight-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: var(--appPortal-heading-color);
+    margin: 0 0 10px;
+    width: -webkit-fill-available;
+}
+.ap-admin-box ul li:nth-child(2) a{
+    margin: 0;
+}
+.ap-top-admin:hover .ap-admin-box{
+    opacity: 1;
+    visibility: visible;
+}
+.toggle-class .ap-dash-main {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+.toggle-class .ap-topnav-wrapper{
+    left: 80px;
+}
+.ap-sidemenu-wrap li.has-sidesubmenu > a::after{
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    top: 20px;
+    bottom: 0;
+    margin: 0 auto 0 8px;
+    border-top: 2px solid #000000de;
+    border-right: 2px solid #000000de;
+    right: 21px;
+    transition: none;
+}
+.ap-navicon.ap-navwin-icon svg{
+    width: 13px;
+    max-height: 16px;
+    object-fit: cover;
+}
+ul.ap-sidesubmenu {
+    position: relative;
+    left: 0px;
+    display: none;
+    margin-left: 20px;
+    transition: all .5s ease-in-out;
+    padding: 0;
+}
+ul.ap-sidesubmenu li a{
+    padding: 6px 10px;
+}
+ul li.has-sidesubmenu.active ul.ap-sidesubmenu.Menu-show{
+    display: block;
+}
+ul li.has-sidesubmenu > a::before{
+    display: none;
+}
+.ap-appform-heading h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--appPortal-heading-color);
+    padding: 0 0 15px;
+}
+.ap-appform-box-wrapper{
+    background-color: var(--appPortal-white-color); 
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.03);
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 30px;  
+}
+.ap-input-field{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.ap-input-field label{
+    color: var(--appPortal-heading-color);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+.ap-input-field label span{
+    color: red;
+}
+.ap-input-field input, .ap-input-field textarea, .ap-input-field select{
+    font-size: 14px;
+    color: var(--appPortal-txt-color);
+    background-color: var(--appPortal-white-color);
+    border: 1px solid var(--appPortal-border-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    min-height: 50px;
+    width: 100%;
+    text-transform: capitalize;
+}
+.ap-input-field textarea{
+    min-height: 100px;
+}
+.ap-input-field input::placeholder{
+    color: var(--appPortal-txt-color); 
+}
+.ap-checbox-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+.ap-checkbox-field{
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.ap-checkbox-field input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+}
+.ap-checkbox-field:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+
+.ap-checkbox-field input:checked ~ .checkmark{
+    background-color: #2196F3;
+}
+.ap-apps-btn{
+    margin: 0 0 10px;
+}
+.checkmark::after{
+    position: absolute;
+    content: '';
+    display: none;
+}
+.ap-checkbox-field input:checked ~ .checkmark::after{
+    display: block;
+}
+/* .ap-checkbox-field input:checked ~ .checkmark::after{ */
+
+.ap-checkbox-field .checkmark::after{
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 8px;
+    border: 1px solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);  
+}
+.ap-checkbox-field label{
+    color: var(--appPortal-heading-color);
+    font-size: 15px;
+    font-weight: 600;
+}
+.ap-table-img img{
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+}
+.ap-table-data td h2{
+    color: var(--appPortal-para-color);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    padding: 20px 0 0; 
+}
+.ap-table-data td p{
+    text-align: left;
+    padding: 20px 0 0 !important; 
+}
+.ap-table-data td .ap-table-icon svg{
+    padding: 20px 0;
+}
+.ap-table-data td .ap-checkbox-container{
+    margin: 0 5px;
+}
+.ap-btn{
+    padding: 8px 15px;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--appPortal-primary-color);
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 11px;
+    min-height: 40px;
+    font-size: 15px;
+    min-width: 100px;
+    margin: 0 0 10px;
+    border: 1px solid var(--appPortal-primary-color);
+}
+.ap-btn:hover{
+    color: var(--appPortal-primary-color);
+    background-color: transparent;
+}
+.ap-btn svg{
+    font-size: 15px;
+    margin-right: 5px;
+}
+.ap-apps-head h3{
+    color: var(--appPortal-heading-color);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.ap-apps-head h3::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 3px;
+    background-color: var(--appPortal-primary-color);
+    
+}
+p.ap-app-shortcode{
+    font-weight: 600;
+    color: var(--appPortal-heading-color);
+}
+p.ap-app-shortcode a{
+    color: var(--appPortal-para-color);
+    font-weight: 400;
+    margin-right: 10px;
+}
+.ap-submit-btn{
+    margin: 20px 0 0;
+}
+.ap-apppage-wrapper h2{
+    color: var(--appPortal-heading-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0px 20px;
+    text-transform: capitalize;   
+}
+.ap-apppage-wrapper .ap-btn{
+    margin: 0 0 20px;
+}
+.ap-tableicon{
+    display: none;
+}
+/* Delete modal popup design */
+.overlay{
+    background-color: rgba(0,0,0,0.6);
+}
+.content{
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, 50%);
+}
+/* Responsive css Start */
+@media (max-width: 675px){
+    .ap-login-row{
+        margin: auto 10px;
+    }
+}
+/* Responsive css End */

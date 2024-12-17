@@ -1,0 +1,718 @@
+/* Frontend css Start */
+/* button css */
+.ap-btn, button.ap-btn, input.ap-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    min-height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--appPortal-white-color);
+    text-transform: capitalize;
+    padding: 0 30px;
+    border-radius: 6px;
+    background: var(--appPortal-primary-color);
+    border: none;
+    box-shadow: none;
+    outline: none;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border: 1px solid var(--appPortal-primary-color);
+    text-decoration: none;
+}
+
+button.ap-btn:focus,
+input.ap-btn:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.ap-btn:hover {
+    background-position: 100% 0%;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color: var(--appPortal-white-color);
+    color: var(--appPortal-primary-color);
+}
+/* Search button css */
+.ap-search-btn a{
+    height: 33px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--appPortal-primary-color);
+    border-radius: 5px;
+}
+.ap-navbar-wrapper {
+    padding: 20px 0 10px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    background-color: var(--appPortal-white-color);
+}
+.ap-navbar-logo a img {
+    max-width: 128px;
+    max-height: 30px;
+    object-fit: contain;
+}
+.ap-menu-wrap ul, .ap-login-wrap ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ap-menu-wrap ul li, .ap-login-wrap ul li {
+    position: relative;
+    margin: 0 10px;
+    display: inline-block;
+}
+.ap-menu-wrap ul li a, .ap-login-wrap ul li a, .ap-category-link ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .5s;
+    color: var(--appPortal-title);
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.ap-menu-wrap ul li a{
+    gap: 2px;
+}
+.ap-menu-wrap ul li a img, .ap-login-wrap ul li a img, .ap-category-link ul li a img{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+ ul.ap-submenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+    margin: auto;
+    background-color: var(--appPortal-white-color);
+    box-shadow: 3px 2px 7px 1px rgba(0,0,0,.08);
+    width: 170px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9;
+}
+ul.ap-submenu li {
+    margin: 8px 10px 5px;
+}
+span.ap-arrow svg {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+    vertical-align: initial;
+}
+ul.ap-submenu li a img {
+    border-radius: 100%;
+    margin-right: 5px;
+}
+li.has-submenu.active ul.ap-submenu.menu-show{
+    visibility: visible;
+    opacity: 1;
+}
+.menu-toggle{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--appPortal-primary-color);
+}
+/* front-search css start */
+.ap-frontlayout-wrapper {
+    padding: 15px 0 0;
+}
+.ap-search-text .form-control{
+    margin-bottom: 10px;
+    position: relative;
+    border: 1px solid #dee2e6;
+    min-height: 40px;
+}
+.ap-search-text .form-control:focus{
+    border: var(--appPortal-primary-color);
+    box-shadow: none;
+
+}
+.ap-search-text{
+    position: relative;
+}
+.ap-search-btn{
+    position: absolute;
+    right: 5px;
+    top: 4px;
+}
+.ap-search-btn a svg path{
+    fill: var(--appPortal-white-color);
+}
+/* .ap-pop-app, */
+.ap-bg-cover{
+    padding: 10px;
+    background-color: var(--appPortal-white-color);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    border-radius: 5px;
+    margin: 0 0 15px;
+}
+.ap-headapp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 15px;
+    border-bottom: 1px solid #f4f4f4;
+    padding: 0 0 10px;
+}
+.ap-headapp h3, .ap-version-box h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--appPortal-title);
+    text-transform: capitalize;
+}
+.ap-headapp a{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--appPortal-title);
+}
+.ap-headapp a svg {
+    font-size: 12px;
+}
+.ap-display-box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ap-display-box a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px dotted #ccc;
+}
+.ap-display-box:nth-last-child(1) a{
+    border-bottom: none;
+    margin: 0;
+}
+.ap-side-flexcol{
+ flex-direction: column;
+}
+/* ap-lateapp-img img, */
+.ap-display-boximg img {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+ /* .ap-lateapp-data h4, */
+.ap-display-boxtext h4{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--appPortal-title);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/* .ap-lateapp-data p, */
+.ap-display-boxtext p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--appPortal-para-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+} 
+.ap-display-boxtext p.ap-update-date{
+    font-size: 13px;
+    font-weight: 400;
+}
+.ap-display-boxtext p.ap-boxdate{
+    color: var(--appPortal-date-color);
+    font-size: 13px;
+}
+.ap-display-boxtext span.icon path{
+    fill: var(--appPortal-star-color);
+}
+.ap-latestapp-wrap .ap-display-box, .ap-recupdateapp-wrap .ap-display-box, .ap-musthaveapp-wrap .ap-display-box, 
+.ap-popular24-wrap .ap-display-box{
+    flex: 0 0 33%;
+}
+.ap-display-box.ap-lateapp-data a, .ap-popular24-app a, .ap-recupdateapp-data a{
+    border-bottom: none;
+    padding: 0;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    color: var(--appPortal-white-color);
+    font-size: 30px;
+    font-weight: 700;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+    color: var(--appPortal-white-color);
+    font-size: 30px;
+    font-weight: 700;
+}
+span.swiper-pagination-bullet{
+    background-color: rgb(255 255 255 / 27%);
+    opacity: 1;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: var(--appPortal-white-color);
+}
+.swiper-pagination{
+    text-align: end;
+    /* right: 20%; */
+    left: -22px !important;
+}
+.ap-topslide-wrap, .ap-topslide-img{
+    position: relative;
+}
+.ap-topslide-img img{
+    width: 100%;
+}
+.ap-topslide-img::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0,rgba(0, 0, 0, 0.75) 100%, rgba(0, 0, 0, 1) 100%);
+}
+.ap-topslide-textwrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ap-topslide-textwrap{
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+}
+.ap-topslide-textimg img{
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.ap-topslide-text h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--appPortal-white-color);
+}
+.ap-topslide-text svg path{
+    fill: #ffa500;
+}
+/* frontpage css */
+.main-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px auto;
+}
+.main-btn a{
+    border: 1px solid #000;
+    max-width: 200px;
+    color: #000;
+    text-align: center;
+    padding: 5px 10px;
+}
+h3.ap-heading{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--appPortal-title);
+    padding: 20px 0 10px;
+}
+.ap-latestapp-wrap .ap-late-appdata {
+    flex: 0 0 33%;
+}
+/* category link css */
+.ap-category-link ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ap-category-link ul li {
+    flex: 0 0 50%;
+    width: 100%;
+}
+.ap-category-link ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .5s;
+    color: var(--appPortal-title);
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 10px;
+    
+}
+.ap-category-link ul li a span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90px;
+    white-space: nowrap;
+}
+ul.ap-submenu li a img, .ap-category-link ul li a img {
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.ap-recupdateapp-wrap .ap-display-boxtext p{
+    margin: 5px 0;
+}
+.ap-vpn-img{
+    margin: 0 0 15px;
+}
+/* updates app css */
+.ap-recupdateapp-data a{
+    border-bottom: none;
+}
+/* footer css */
+.ap-footer-wrapper {
+    padding: 45px 0 40px;
+    background-color: #fff;
+}
+.ap-footer-logo a img{
+    max-width: 128px;
+    min-height: 30px;
+    object-fit: contain;
+}
+.ap-footer-para p, .ap-footer-para p{
+    margin: 10px 0 0px;
+    padding-bottom: 15px !important;
+}
+.ap-footer-head h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--appPortal-title);
+    padding: 0 0 15px;
+}
+.ap-footer-head ul li{
+    margin: 0 0 5px;
+}
+.ap-footer-head a, .ap-footer-head ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--appPortal-para-color);
+    text-decoration: none;
+}
+.ap-copyright-text{
+    background-color: var(--appPortal-white-color);
+    padding: 10px 0;
+}
+.ap-copy-text p{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--appPortal-para-color);
+}
+.ap-display-box-wrapper.ap-featapp-wrap, .ap-display-box-wrapper.ap-recupdateapp-wrap, .ap-display-box-wrapper .ap-musthaveapp-wrap, 
+.ap-musthave-app-wrapper .ap-musthaveapp-wrap, .ap-popular24-wrapper .ap-popular24-wrap{
+    justify-content: space-between;
+}
+.ap-feat-appdata .ap-display-boximg img{
+    max-width: 90px;
+    max-height: 90px;
+    margin: 0 0 7px;
+}
+.ap-feat-appdata .ap-display-boxtext h4{
+    width: 97px;
+    height: 40px;
+    line-clamp: 2;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+.ap-footer-para ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0 0;
+}
+.ap-noresult p{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px 0 !important;
+}
+/*  Contact form css */
+.ap-input-field {
+    margin: 0 0 20px; 
+}
+.ap-input-field label{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--appPortal-title);
+    margin: 0 0 10px;
+}
+.ap-input-field label span, span.error{
+    color: red;
+}
+
+.ap-input-field .form-control{
+    min-height: 45px;
+    width: 100%;
+}
+.ap-input-field .form-control:focus{
+    border-color: var(--appPortal-primary-color);
+}
+.ap-input-field textarea.form-control{
+    min-height: auto;
+    border: 1px solid #dee2e6 !important;
+}
+/* all category css */
+.ap-category-link.ap-allcat-link ul li{
+    flex: 0 0 33%;
+    margin-bottom: 10px;
+}
+.ap-category-link.ap-allcat-link ul li a img{
+    width: 35px;
+    height: 35px;
+}
+.ap-category-link.ap-allcat-link ul li a span{
+    width: 100%;
+}
+.ap-allcat-link ul {
+    justify-content: flex-start;
+}
+/* browse history page css */
+.ap-browse-box .ap-display-box {
+    flex: 0 0 12.3%;
+    margin: 0 0 15px;
+}
+/* data single page css */
+.ap-topsingle-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ap-topsingle-box img{
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 10px;   
+}
+.ap-review-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+} 
+.ap-review-btn svg path{
+    fill: #ccc;
+}
+.ap-content-sociallink ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0 0;
+}
+
+.ap-content-sociallink ul li{
+    background-color: #4267b2;
+    max-width: 164px;
+    padding: 5px 36px;
+    text-align: center;
+}
+.ap-content-sociallink ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--appPortal-white-color);
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    /* gap: 5px; */
+} 
+.ap-content-sociallink ul li a svg {
+    max-width: 15px;
+    max-height: 15px;
+}
+.ap-content-sociallink ul li a svg path{
+    fill: var(--appPortal-white-color);
+}
+.ap-content-sociallink ul li:nth-child(2){
+    background-color: #429cd6;
+}
+.ap-content-sociallink ul li:nth-child(3){
+    background-color: #0d77b7;
+}
+.ap-content-sociallink ul li:nth-child(4){
+    background-color: #5f5180;
+}
+.ap-content-sociallink ul li:nth-child(5){
+    background-color: #71c169;
+}
+.ap-content-sociallink ul li:nth-child(6){
+    background-color: #df1850;
+}
+/* slider button */
+.ap-inner-slider{
+    margin: 0 0 15px;
+}
+.ap-inner-slider .swiper-button-next::after, .ap-inner-slider .swiper-button-prev::after{
+    font-size: 20px;
+}
+.ap-inner-slider .swiper-button-next, .ap-inner-slider .swiper-button-prev{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000007e;
+    border-radius: 50%;
+}
+.ap-version-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.ap-version-box{
+    padding: 0 0 10px;
+}
+.ap-topsingle-data h4{
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--appPortal-title);
+}
+.ap-innerslide-content img {
+    min-height: 250px;
+    max-height: 250px;
+    height: 100%;
+    width: 100%;
+    /* max-height: 100%; */
+}
+.ap-display-box-wrapper.ap-featapp-wrap.ap-browse-box{
+    justify-content: flex-start;
+    gap: 2px;
+}
+.ap-display-box-wrapper.ap-featapp-wrap > .ap-feat-appdata > a{
+    flex-direction: column;  
+    border-bottom: none;  
+}
+/* Bredcrumb design */
+ul.ap-breadcrumb-wrap {
+    display: flex;
+    list-style: none;
+    padding: 0 0 10px!important;
+    /* margin: 1rem 0; */
+}
+.ap-bredcrumb-link{
+    position: relative;
+    /* margin-right: 0.5rem; */
+}
+.ap-bredcrumb-link a{
+    color: var(--appPortal-title);
+    text-decoration: none;
+}
+.ap-bredcrumb-link::after {
+    content: "/";
+    margin: 0 10px;
+}
+li.ap-bredcrumb-link:last-child::after {
+    content: "";
+}
+li.ap-bredcrumb-link.text-active a{
+    color: var(--appPortal-primary-color);
+}
+span.ap-no-record{
+    font-weight: 600;
+}
+
+/* Responsive css */
+@media (max-width: 1199.98px) {
+    .ap-menu-wrap ul li, .ap-login-wrap ul li {
+        margin: 0 1px;
+    }
+    .ap-headapp{
+        flex-wrap: wrap;
+    }
+    .ap-display-box-wrapper.ap-featapp-wrap {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+}
+@media (max-width: 1024px){
+    .menu-toggle {
+        display: inline-block;
+        text-align: -webkit-right;
+        width: 100%;
+    }
+    .ap-menu-wrap {
+        position: fixed;
+        left: -200px;
+        top: 0;
+        bottom: 0;
+        width: 200px;
+        margin: 0;
+        text-align: left;
+        background-color: var(--appPortal-white-color);
+        transition: all .5s ease-in-out;
+        z-index: 9999;
+        padding: 20px 0 0;
+    }
+    .ap-menu-open .ap-menu-wrap{
+        left: 0;
+    }
+    .ap-menu-wrap ul{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ap-menu-wrap ul li{
+        padding-left: 10px;
+    }
+    li.has-submenu.active {
+        padding-bottom: 30px;
+    }
+    .ap-menu-wrap ul li{
+        display: block;
+    }
+    ul.ap-submenu {
+        /* position: relative; */
+        top: 20px;
+        margin: 0;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    ul.ap-submenu.menu-show{
+        position: relative;
+    }
+    ul.ap-submenu li{
+        margin: 0 0 10px;
+    }
+    .ap-display-box-wrapper .ap-display-box{
+        flex: 0 0 50%;
+    }
+    .ap-display-box-wrapper.ap-featapp-wrap .ap-display-box {
+        flex: 0 0 30%;
+    }
+}
+@media (max-width: 480px){
+    .ap-display-box-wrapper .ap-display-box{
+        flex: 0 0 100%;
+    }
+    .ap-display-box-wrapper.ap-featapp-wrap .ap-display-box {
+        flex: 0 0 30%;
+    }
+}
+@media (max-width: 1199px){}
+@media (max-width: 1199px){}
+
+    
